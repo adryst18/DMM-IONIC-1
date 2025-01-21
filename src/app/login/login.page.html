@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>INICIO DE SESION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-col>
+  <div class="ion-text-center">
+
+    <ion-col>
+      <div class="ion-text-center2">
+        <ion-item>
+          <ion-input label="Correo electronico" labelPlacement="floating" placeholder="example@email.com" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Contrasenia" labelPlacement="floating" type="password"></ion-input>
+        </ion-item>
+        <ion-button fill="clear" color="warning" routerLink="/inicio" >
+          INGRESAR
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-button>
+        <ion-chip>
+
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg"  fill="clear"/>
+          </ion-avatar>
+          <ion-label  color="warning" fill="clear">Registrate en esta pagina chida</ion-label>
+        </ion-chip>
+      </div>
+    </ion-col>
+    
+</div>
+</ion-col>
+
+</ion-content>
+ 
