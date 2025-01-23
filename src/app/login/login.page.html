@@ -10,15 +10,15 @@
 
     <ion-col>
       <div class="ion-text-center2">
+        <form #formulariologin="ngForm"(ngSubmit)="login(formulariologin)"> 
         <ion-item>
-          <ion-input [(ngModel)]= "email" labelPlacement="floating" placeholder="example@email.com" type="email"></ion-input>
+          <ion-input  name = "email"  [(ngModel)]= "email" labelPlacement="floating" placeholder="example@email.com" type="email"  required ></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input [(ngModel)]= "password" labelPlacement="floating" type="password"></ion-input>
+          <ion-input name = "password" [(ngModel)]= "password" labelPlacement="floating" type="password"></ion-input>
         </ion-item>
-        <ion-button (click)=  "login()" color="warning"  >
+        <ion-button type="submit" color="warning"  >
           INGRESAR
-          <ion-icon slot="icon-only" name="heart"></ion-icon>
         </ion-button>
         <ion-chip>
 
@@ -27,6 +27,7 @@
           </ion-avatar>
           <ion-label  color="warning" fill="clear">Registrate en esta pagina chida</ion-label>
         </ion-chip>
+      </form>
       </div>
     </ion-col>
     
