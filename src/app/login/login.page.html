@@ -11,12 +11,12 @@
     <ion-col>
       <div class="ion-text-center2">
         <ion-item>
-          <ion-input label="Correo electronico" labelPlacement="floating" placeholder="example@email.com" type="email"></ion-input>
+          <ion-input [(ngModel)]= "email" labelPlacement="floating" placeholder="example@email.com" type="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input label="Contrasenia" labelPlacement="floating" type="password"></ion-input>
+          <ion-input [(ngModel)]= "password" labelPlacement="floating" type="password"></ion-input>
         </ion-item>
-        <ion-button fill="clear" color="warning" routerLink="/inicio" >
+        <ion-button (click)=  "login()" color="warning"  >
           INGRESAR
           <ion-icon slot="icon-only" name="heart"></ion-icon>
         </ion-button>
