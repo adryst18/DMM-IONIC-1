@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,11 @@ export class LoginPage implements OnInit {
 
   email:string="admin";
   password:string="";
-  constructor() { }
+
+  constructor(
+    private navController: NavController
+
+  ) { }
 
   ngOnInit() {
   }
@@ -22,6 +27,9 @@ export class LoginPage implements OnInit {
 
     //valores del formulario
     console.log(formulario.value);
+
+    //inyeccion de dependencias
+
 
 
     //validar el formulario
@@ -45,7 +53,7 @@ export class LoginPage implements OnInit {
    //validar si el formulario se
 
    if(this.email=== 'admin' && this.password==='admin'){
-    console.log('Login correcto')
+    this.navController.navigateForward('/inicio');
    }else{
     console.log('Login incorrecto');
    }
